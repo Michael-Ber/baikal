@@ -46,6 +46,9 @@
     &__input {
         @include adaptiv-size('width', 400, 280);
         @include adaptiv-size('height', 50, 30);
+        @include adaptiv-size('font-size', 16, 12);
+        padding: 0 20px;
+        
 
         @media(max-width: $breakpoint-767) {
             @include adaptiv-size('width', 300, 150);
