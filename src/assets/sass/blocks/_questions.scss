@@ -76,15 +76,14 @@
 
     &__submit {
         border: none;
+        cursor: pointer;
     }
 }
 
 .questions-icon {
     @include adaptiv-size('width', 46, 30);
-    // position: absolute;
     top: 50%;
     right: calc(100% + 5px);
-    // transform: translateY(-50%);
 
     img {
         width: 100%;

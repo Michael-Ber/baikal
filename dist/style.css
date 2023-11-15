@@ -498,6 +498,7 @@
 }
 .questions__submit {
   border: none;
+  cursor: pointer;
 }
 
 .questions-icon {
@@ -515,7 +516,7 @@
   padding: 25px 0 0 0;
 }
 .excursy__container {
-  max-width: 1120px;
+  max-width: 1125px;
   margin: 0 auto;
 }
 .excursy__img {
