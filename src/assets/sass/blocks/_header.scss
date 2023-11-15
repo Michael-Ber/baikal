@@ -1,0 +1,312 @@
+.header {
+    font-family: 'Myriad Pro';
+    color: $gray-600;
+    min-height: 100px;
+
+    &__container {
+        max-width: 1130px;
+        margin-left: 45px;
+
+        @media(max-width: $breakpoint-1199) {
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        padding: 13px 0 13px 0;
+
+        @media(max-width: $breakpoint-1199) {
+            padding: 13px 10px 13px 10px;
+        }
+
+        @media(max-width: $breakpoint-991) {
+            justify-content: space-between;
+        }
+    }
+
+    &__logo {
+        a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        cursor: pointer;
+
+        @media(max-width: $breakpoint-991) {
+            order: 1;
+        }
+    }
+
+    &__phone {
+        @include adaptiv-size("margin-left", 90, 10);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 0 0 auto;
+        font-size: 12.7px;
+
+        @media(max-width: $breakpoint-991) {
+            margin-left: 0;
+            order: 3;
+        }
+
+        @media(max-width: $breakpoint-575) {
+            display: none;
+        }
+    }
+
+    &__nav {
+        @include adaptiv-size("margin-left", 116, 10);
+        font-size: 12.7px;
+        flex: 1 0 auto;
+
+        @media(max-width: $breakpoint-991) {
+            display: none;
+        }
+    }
+}
+
+.logo-header {
+
+    &__img {
+        @include adaptiv-size("width", 70, 40);
+        @include adaptiv-size("height", 70, 40);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__text-wrapper {
+        position: relative;
+        display: flex;
+
+    }
+
+    &__img-name {
+        @include adaptiv-size("width", 122, 80);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__text {
+        @include adaptiv-size("font-size", 12, 7);
+        display: flex;
+        gap: 8px;
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        text-align: center;
+        // font-size: 12px;
+        line-height: 10px;
+    }
+
+    &__num {
+        @include adaptiv-size('line-height', 14, 12);
+
+    }
+}
+
+.phone-header {
+
+    &__img {}
+
+    &__tels {}
+
+    &__list {}
+
+    &__item {
+        position: relative;
+
+        &:nth-child(n):not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &:hover {
+            &::after {
+                content: '';
+                position: absolute;
+                top: calc(100% + 3px);
+                left: 0;
+                height: 2px;
+                background-color: $gray-600;
+                animation: widthAnimation .3s forwards;
+            }
+
+            // color: lighten($gray-600, 10%);
+        }
+    }
+
+    &__link {}
+}
+
+.nav-header {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    &__item {
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            &::after {
+                content: '';
+                position: absolute;
+                top: calc(100% + 5px);
+                left: 0;
+                height: 2px;
+                background-color: $gray-600;
+                animation: widthAnimation .3s forwards;
+            }
+        }
+
+
+    }
+
+    &__navlink {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        white-space: nowrap;
+
+        &_icon-main {
+            &::before {
+                content: url('./assets/icons/main.png');
+                max-width: 15px;
+                max-height: 15px;
+            }
+        }
+
+        &_icon-catalog {
+            &::before {
+                content: url('./assets/icons/catalog.png');
+                max-width: 15px;
+                max-height: 15px;
+            }
+        }
+
+        &_icon-schedule {
+            &::before {
+                content: url('./assets/icons/schedule.png');
+                max-width: 15px;
+                max-height: 15px;
+            }
+        }
+
+        &_icon-about {
+            &::before {
+                content: url('./assets/icons/about.png');
+                max-width: 15px;
+                max-height: 15px;
+            }
+        }
+
+        &_icon-community {
+            &::before {
+                content: url('./assets/icons/community.png');
+                max-width: 15px;
+                max-height: 15px;
+            }
+        }
+    }
+}
+
+.header-burger {
+    &__btn-wrapper {
+        display: none;
+        justify-content: center;
+
+        @media(max-width: $breakpoint-991) {
+            display: flex;
+            order: 2;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        width: 25px;
+        cursor: pointer;
+
+        span {
+            width: 25px;
+            height: 2px;
+            background-color: $gray-600
+        }
+    }
+
+    &__menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100vh;
+        z-index: 110;
+        padding: 50px 10px 50px 50px;
+
+        &_active {
+            display: block;
+            background-color: $white;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 35px;
+        right: 35px;
+        font-size: 24px;
+        color: $gray-600;
+        cursor: pointer;
+
+        @media(max-width:$breakpoint-767) {
+            top: 20px;
+            right: 20px;
+        }
+    }
+
+    &__nav {
+        height: 100%;
+    }
+
+    &__item {
+        &:nth-child(n):not(:first-child) {
+            margin-top: 20px;
+        }
+
+        &_phone {
+            display: none;
+
+            @media(max-width:$breakpoint-575) {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    }
+
+    &__navlink {
+        color: $gray-600;
+    }
+
+
+}

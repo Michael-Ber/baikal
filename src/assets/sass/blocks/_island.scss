@@ -1,0 +1,67 @@
+.island {
+    padding: 40px 0 0 0;
+    background-color: $white-900;
+
+    &__container {
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    &__title {
+
+        & .island-icon {
+            @include adaptiv-size('width', 75, 45);
+        }
+
+    }
+
+    &__content {
+        margin-top: 30px;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -10px;
+            width: 4px;
+            height: 100%;
+            background-color: $main-color;
+        }
+
+    }
+
+    &__text-icon {
+        @include adaptiv-size('width', 25, 15);
+        @include adaptiv-size('height', 25, 15);
+        @include adaptiv-size('margin-left', 15, 5);
+        @include adaptiv-size('margin-right', 15, 5);
+        float: left;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        @include adaptiv-size('font-size', 21, 14);
+        line-height: 120%;
+        color: $gray-900;
+        letter-spacing: -0.04em;
+    }
+
+    &__img {
+        width: 100%;
+        margin-top: 95px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

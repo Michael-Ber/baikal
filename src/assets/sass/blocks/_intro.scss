@@ -1,0 +1,56 @@
+.intro {
+    background: url('./assets/img/intro_bg.jpg') center (center/cover) no-repeat;
+    height: 100vh;
+    color: $white;
+    font-family: 'Myriad Pro';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__bg {
+        @media(max-width: $breakpoint-767) {
+            padding: 0 50px;
+        }
+
+        @media(max-width: $breakpoint-575) {
+            padding: 0 25px;
+        }
+    }
+
+    &__title {
+        @include adaptiv-size("font-size", 26, 16);
+        line-height: 33px;
+        max-width: 610px;
+        margin: 0 auto;
+        text-align: center;
+
+        b {
+            @include adaptiv-size("font-size", 36, 20);
+            display: block;
+            font-family: 'Segoe UI';
+        }
+    }
+
+    &__paragraph {
+        @include adaptiv-size("font-size", 21, 14);
+        font-family: 'Myriad Pro';
+        font-style: italic;
+        max-width: 670px;
+        text-align: center;
+        line-height: 120%;
+        margin-top: 33px;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 33px;
+        gap: 23px;
+
+    }
+
+    &__link {}
+}
+
+.btn {}

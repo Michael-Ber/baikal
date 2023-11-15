@@ -1,0 +1,77 @@
+@import './var/variables';
+@import './var/mixins';
+@import './libs/animation';
+@import './libs/fonts';
+@import './blocks/header';
+@import './blocks/intro';
+@import './blocks/island';
+@import './blocks/sights';
+@import './blocks/questions';
+@import './blocks/excursy';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Segoe UI';
+}
+
+.container-outer {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    @include adaptiv-size("width", 200, 120);
+    @include adaptiv-size("height", 50, 30);
+    @include adaptiv-size("font-size", 15, 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-color;
+    text-transform: uppercase;
+    font-family: 'Segoe UI';
+    color: $white;
+    letter-spacing: 0.04em;
+    transition: .3s all ease;
+    // padding: 0 20px;
+
+    &:hover {
+        background-color: lighten($main-color, 10%);
+    }
+}
+
+.section-title {
+    @include adaptiv-size('font-size', 30, 18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe Print';
+    color: $main-color;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: center;
+
+    & .section-title-icon {
+        margin-right: 5px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

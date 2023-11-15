@@ -1,0 +1,67 @@
+.excursy {
+    padding: 25px 0 0 0;
+
+    &__container {
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+
+    &__title {}
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 360px);
+        justify-content: center;
+        gap: 15px;
+        margin-top: 90px;
+    }
+
+    &__card {}
+}
+
+.card-excursy {
+
+    &__title {
+        @include adaptiv-size('font-size', 18, 12);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $main-color;
+        line-height: 120%;
+        text-align: center;
+
+        &::before {
+            content: url('./assets/icons/bird.png');
+        }
+    }
+
+    &__img {}
+
+    &__schedule {
+        margin-top: 57px;
+    }
+
+    &__duration {}
+
+    &__time {}
+
+    &__subtitle {
+        @include adaptiv-size('font-size', 18, 12);
+        font-weight: 700;
+        color: $black
+    }
+
+    &__text {
+        @include adaptiv-size('font-size', 18, 12);
+        font-weight: 600;
+        font-style: italic;
+        color: $gray-700;
+    }
+
+    &__descr {
+        @include adaptiv-size('font-size', 18, 12);
+        font-family: 'Myriad Pro';
+        color: $gray-700;
+        margin-top: 40px;
+    }
+}
